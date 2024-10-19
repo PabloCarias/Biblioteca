@@ -31,7 +31,8 @@ public class AutorController {
 
     @GetMapping("{id}")
     public ResponseEntity<Autor> buscarporID(@PathVariable long id){
-        Autor autor = autorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Autor no encontrado: "+id));
+        Autor autor = autorRepository.findById(id).
+                orElseThrow(() -> new ResourceNotFoundException("Autor no encontrado: "+id));
         return ResponseEntity.ok(autor);
     }
 
@@ -48,7 +49,7 @@ public class AutorController {
 
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Map<String,Boolean>> BorrarAutor(@PathVariable Long id){
+    public ResponseEntity<Map<String,Boolean>> BorrarAutor(@PathVariable long id){
         Autor autor = autorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Autor no encontrado: "+id));
         autorRepository.delete(autor);
