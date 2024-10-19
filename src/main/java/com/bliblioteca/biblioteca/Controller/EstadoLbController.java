@@ -3,7 +3,6 @@ package com.bliblioteca.biblioteca.Controller;
 
 import com.bliblioteca.biblioteca.Exeption.ResourceNotFoundException;
 import com.bliblioteca.biblioteca.Model.EstadoLb;
-import com.bliblioteca.biblioteca.Model.Idioma;
 import com.bliblioteca.biblioteca.Repository.EstadoLbRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
